@@ -10,7 +10,7 @@ The implementation of this pattern requires providing every (passive) object wit
 In questo esercizio è stato implementato in Java il pattern Active Object. 
 Con il termine Active Object ci si riferisce ad una micro-architettura, che permette l'invocazione asincrona dei metodi. In particolare, il chiamante non deve sospsendersi per aspettare l'esecuzione dell'operazione da parte del chiamato. Questo è possibile grazie alla presenza di un elemento di indirezione, cioè una coda. Le invocazioni, generate dal chiamato, vengono inserite all'interno della coda. Un thread di controllo si occuperà di scodare singolarmente le invocazioni dalla coda e indirizzarle al chiamato. Nel caso in cui l'invocazione preveda un valore di ritorno possono essere sfruttate le callback.
 
-La creazione in Java di un sistema con una architettura di questo tipo sfrutta i proxy dinamici. 
+La creazione, in Java, di un sistema con una architettura di questo tipo sfrutta i proxy dinamici. 
 La creazione dinamica dei proxy è ottenuta sfruttando la reflection. In particolare, la classe Proxy e l'interfaccia InvocationHandler del package java.lang.reflect.
 
 Gli elementi del pattern Active Object sono:
